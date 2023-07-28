@@ -1,4 +1,4 @@
-.App {
+/* .App {
   width: 100vw;
   height: 100vh;
   background: #fff;
@@ -141,7 +141,7 @@ body {
   margin-right: 5px;
 }
 
-.message-meta #author {
+.message-meta #owner {
   margin-left: 10px;
   font-weight: bold;
 }
@@ -188,4 +188,94 @@ body {
 }
 .hide {
   opacity: 0 !important;
+} */
+
+/* Styling for the chat window */
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Styling for the chat header */
+.chat-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* Styling for the chat body */
+.chat-body {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+/* Styling for individual chat messages */
+.message-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  max-width: 80%;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+#you {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: #fff;
+}
+
+#other {
+  align-self: flex-start;
+  background-color: #f0f0f0;
+}
+
+/* Styling for the message content */
+.message-content {
+  margin-bottom: 5px;
+}
+
+/* Styling for the message metadata (time and owner) */
+.message-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #777;
+}
+
+/* Styling for the chat footer */
+.chat-footer {
+  display: flex;
+  padding: 10px;
+}
+
+/* Styling for the input field and button in the chat footer */
+input[type="text"] {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
