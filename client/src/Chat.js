@@ -17,7 +17,7 @@ function Chat({ socket, username, room }) {
           new Date(Date.now()).getMinutes(),
       };
 
-      await socket.emit("send_message", messageData);
+      await socket.emit("sendMsg", messageData);
       setMessageList((list) => [...list, messageData]);
       setCurrentMessage("");
     }
@@ -36,9 +36,9 @@ function Chat({ socket, username, room }) {
   }, [messageList]);
 
   return (
-    <div className="chat-window">
+    <div className="chat-container">
       <div className="chat-header">
-        <p>Live Chat</p>
+        <p>Chat Room</p>
       </div>
       <div className="chat-body">
         <div className="message-container" ref={chatBottomRef}>
@@ -49,11 +49,11 @@ function Chat({ socket, username, room }) {
                 className="message"
                 id={username === messageContent.owner ? "you" : "other"}
               >
-                <div>
+                <div className="inside-message">
                   <div className="message-content">
                     <p>{messageContent.message}</p>
                   </div>
-                  <div className="message-meta">
+                  <div className="message-information">
                     <p id="time">{messageContent.time}</p>
                     <p id="owner">{messageContent.owner}</p>
                   </div>
